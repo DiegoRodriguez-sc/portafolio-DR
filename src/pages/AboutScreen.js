@@ -66,7 +66,7 @@ const AboutScreen = () => {
         </Typography>
         <Typography variant="h3">Contacto</Typography>
          <Box mb={2} />
-         <Paper sx={{height:70, bgcolor:"#1C1C1C", color:"#E2E2E2", display:"flex", justifyContent:"flex-start"}}>
+         <Paper sx={{height:90, bgcolor:"#1C1C1C", color:"#E2E2E2", display:"flex", justifyContent:"flex-start"}}>
          <Box sx={{display:"flex"}}>
          <Box
           marginLeft={2}
@@ -75,13 +75,13 @@ const AboutScreen = () => {
           alt={"logo email"}
           src={github}
         />
-          <Typography sx={{lineHeight:4.5, textTransform:"uppercase", fontSize:"2vh",marginLeft:.5}}>
+          <Typography sx={{lineHeight:5.5, textTransform:"uppercase", fontSize:"2vh",marginLeft:.5}}>
             DiegoRodriguez-sc
           </Typography>
          </Box>
          </Paper>
          <Box mb={2} />
-         <Paper sx={{height:70, bgcolor:"#1C1C1C", color:"#E2E2E2", display:"flex", justifyContent:"flex-start"}}>
+         <Paper sx={{height:90, bgcolor:"#1C1C1C", color:"#E2E2E2", display:"flex", justifyContent:"flex-start"}}>
          <Box sx={{display:"flex"}}>
          <Box
           marginLeft={2}
@@ -90,13 +90,13 @@ const AboutScreen = () => {
           alt={"logo email"}
           src={linkedin}
         />
-          <Typography sx={{lineHeight:4.5, textTransform:"uppercase", fontSize:"2vh",marginLeft:.5}}>
+          <Typography sx={{lineHeight:5.5, textTransform:"uppercase", fontSize:"2vh",marginLeft:.5}}>
             Diego-Rodriguez-sc
           </Typography>
          </Box>
          </Paper>
          <Box mb={2} />
-         <Paper sx={{height:70, bgcolor:"#1C1C1C", color:"#E2E2E2", display:"flex", justifyContent:"flex-start"}}>
+         <Paper sx={{height:90, bgcolor:"#1C1C1C", color:"#E2E2E2", display:"flex", justifyContent:"flex-start"}}>
          <Box sx={{display:"flex"}}>
          <Box
           marginLeft={2}
@@ -105,13 +105,13 @@ const AboutScreen = () => {
           alt={"logo email"}
           src={web}
         />
-          <Typography sx={{lineHeight:4.5, textTransform:"uppercase", fontSize:"2vh",marginLeft:.5}}>
+          <Typography sx={{lineHeight:5.5, textTransform:"uppercase", fontSize:"2vh",marginLeft:.5}}>
             Diego Rodriguez
           </Typography>
          </Box>
          </Paper>
          <Box mb={2} />
-         <Paper sx={{height:70, bgcolor:"#1C1C1C", color:"#E2E2E2", display:"flex", justifyContent:"flex-start"}}>
+         <Paper sx={{height:90, bgcolor:"#1C1C1C", color:"#E2E2E2", display:"flex", justifyContent:"flex-start"}}>
          <Box sx={{display:"flex"}}>
          <Box
           marginLeft={2}
@@ -120,7 +120,7 @@ const AboutScreen = () => {
           alt={"logo email"}
           src={gmail}
         />
-          <Typography sx={{lineHeight:4.5, textTransform:"uppercase", fontSize:"2vh",marginLeft:.5}}>
+          <Typography sx={{lineHeight:5.5, textTransform:"uppercase", fontSize:"2vh",marginLeft:.5}}>
             Diego.Rodriguez.sc@gmail.com
           </Typography>
          </Box>

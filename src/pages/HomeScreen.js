@@ -15,11 +15,8 @@ const HomeScreen = () => {
     <Container
       maxWidth="sm"
       sx={{
-        height:"100vh",
-        backgroundColor:"#131313",
-        color:"#E2E2E2",
+        height:"95.1vh",
         display: "flex",
-        justifyContent: "center",
         alignItems: "center",
       }}
     >
