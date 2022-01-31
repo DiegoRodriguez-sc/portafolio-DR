@@ -3,7 +3,7 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { Box, Container, Typography } from "@mui/material";
 
-const NavBar = () => {
+const NavBar = ({setChangeTheme}) => {
   const [theme, setTheme] = useState(true);
   const mydate = new Date(),
     day = mydate.getDay();
@@ -22,6 +22,7 @@ const NavBar = () => {
 
   const handleTheme = () => {
      setTheme(!theme);
+     setChangeTheme(!theme);
   }
   return (
     <Container maxWidth="sm" sx={{ pt: 3 }}>

@@ -8,7 +8,7 @@ import web from "../assets/web.svg";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const AboutScreen = () => {
+const AboutScreen = ({ changeTheme }) => {
   const navigate = useNavigate();
   const handleBack = () => {
     navigate("/");
@@ -26,7 +26,7 @@ const AboutScreen = () => {
       <Box width={"100%"}>
         <Box mb={10} />
         <Link
-          color={"#E2E2E2"}
+          color={changeTheme ? "#E2E2E2" : "#050038"}
           style={{ cursor: "pointer", fontSize: "2rem" }}
           onClick={handleBack}
         >
@@ -65,67 +65,127 @@ const AboutScreen = () => {
           aprendiendo java con Spring Boot.
         </Typography>
         <Typography variant="h3">Contacto</Typography>
-         <Box mb={2} />
-         <Paper sx={{height:90, bgcolor:"#1C1C1C", color:"#E2E2E2", display:"flex", justifyContent:"flex-start"}}>
-         <Box sx={{display:"flex"}}>
-         <Box
-          marginLeft={2}
-          component="img"
-          sx={{ width: "60px" }}
-          alt={"logo email"}
-          src={github}
-        />
-          <Typography sx={{lineHeight:5.5, textTransform:"uppercase", fontSize:"2vh",marginLeft:.5}}>
-            DiegoRodriguez-sc
-          </Typography>
-         </Box>
-         </Paper>
-         <Box mb={2} />
-         <Paper sx={{height:90, bgcolor:"#1C1C1C", color:"#E2E2E2", display:"flex", justifyContent:"flex-start"}}>
-         <Box sx={{display:"flex"}}>
-         <Box
-          marginLeft={2}
-          component="img"
-          sx={{ width: "60px" }}
-          alt={"logo email"}
-          src={linkedin}
-        />
-          <Typography sx={{lineHeight:5.5, textTransform:"uppercase", fontSize:"2vh",marginLeft:.5}}>
-            Diego-Rodriguez-sc
-          </Typography>
-         </Box>
-         </Paper>
-         <Box mb={2} />
-         <Paper sx={{height:90, bgcolor:"#1C1C1C", color:"#E2E2E2", display:"flex", justifyContent:"flex-start"}}>
-         <Box sx={{display:"flex"}}>
-         <Box
-          marginLeft={2}
-          component="img"
-          sx={{ width: "60px" }}
-          alt={"logo email"}
-          src={web}
-        />
-          <Typography sx={{lineHeight:5.5, textTransform:"uppercase", fontSize:"2vh",marginLeft:.5}}>
-            Diego Rodriguez
-          </Typography>
-         </Box>
-         </Paper>
-         <Box mb={2} />
-         <Paper sx={{height:90, bgcolor:"#1C1C1C", color:"#E2E2E2", display:"flex", justifyContent:"flex-start"}}>
-         <Box sx={{display:"flex"}}>
-         <Box
-          marginLeft={2}
-          component="img"
-          sx={{ width: "60px" }}
-          alt={"logo email"}
-          src={gmail}
-        />
-          <Typography sx={{lineHeight:5.5, textTransform:"uppercase", fontSize:"2vh",marginLeft:.5}}>
-            Diego.Rodriguez.sc@gmail.com
-          </Typography>
-         </Box>
-         </Paper>
-         <Box mb={2} />
+        <Box mb={2} />
+        <Paper
+          sx={{
+            height: 90,
+            bgcolor: changeTheme ? "#1C1C1C" : "#CCCCCC",
+            color: changeTheme ? "#E2E2E2" : "#050038",
+            display: "flex",
+            justifyContent: "flex-start",
+          }}
+        >
+          <Box sx={{ display: "flex" }}>
+            <Box
+              marginLeft={2}
+              component="img"
+              sx={{ width: "60px" }}
+              alt={"logo email"}
+              src={github}
+            />
+            <Typography
+              sx={{
+                lineHeight: 5.5,
+                textTransform: "uppercase",
+                fontSize: "2vh",
+                marginLeft: 0.5,
+              }}
+            >
+              DiegoRodriguez-sc
+            </Typography>
+          </Box>
+        </Paper>
+        <Box mb={2} />
+        <Paper
+          sx={{
+            height: 90,
+            bgcolor: changeTheme ? "#1C1C1C" : "#CCCCCC",
+            color: changeTheme ? "#E2E2E2" : "#050038",
+            display: "flex",
+            justifyContent: "flex-start",
+          }}
+        >
+          <Box sx={{ display: "flex" }}>
+            <Box
+              marginLeft={2}
+              component="img"
+              sx={{ width: "60px" }}
+              alt={"logo email"}
+              src={linkedin}
+            />
+            <Typography
+              sx={{
+                lineHeight: 5.5,
+                textTransform: "uppercase",
+                fontSize: "2vh",
+                marginLeft: 0.5,
+              }}
+            >
+              Diego-Rodriguez-sc
+            </Typography>
+          </Box>
+        </Paper>
+        <Box mb={2} />
+        <Paper
+          sx={{
+            height: 90,
+            bgcolor: changeTheme ? "#1C1C1C" : "#CCCCCC",
+            color: changeTheme ? "#E2E2E2" : "#050038",
+            display: "flex",
+            justifyContent: "flex-start",
+          }}
+        >
+          <Box sx={{ display: "flex" }}>
+            <Box
+              marginLeft={2}
+              component="img"
+              sx={{ width: "60px" }}
+              alt={"logo email"}
+              src={web}
+            />
+            <Typography
+              sx={{
+                lineHeight: 5.5,
+                textTransform: "uppercase",
+                fontSize: "2vh",
+                marginLeft: 0.5,
+              }}
+            >
+              Diego Rodriguez
+            </Typography>
+          </Box>
+        </Paper>
+        <Box mb={2} />
+        <Paper
+          sx={{
+            height: 90,
+            bgcolor: changeTheme ? "#1C1C1C" : "#CCCCCC",
+            color: changeTheme ? "#E2E2E2" : "#050038",
+            display: "flex",
+            justifyContent: "flex-start",
+          }}
+        >
+          <Box sx={{ display: "flex" }}>
+            <Box
+              marginLeft={2}
+              component="img"
+              sx={{ width: "60px" }}
+              alt={"logo email"}
+              src={gmail}
+            />
+            <Typography
+              sx={{
+                lineHeight: 5.5,
+                textTransform: "uppercase",
+                fontSize: "2vh",
+                marginLeft: 0.5,
+              }}
+            >
+              Diego.Rodriguez.sc@gmail.com
+            </Typography>
+          </Box>
+        </Paper>
+        <Box mb={2} />
       </Box>
     </Container>
   );

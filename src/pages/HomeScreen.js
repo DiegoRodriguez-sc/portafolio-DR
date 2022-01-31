@@ -4,7 +4,7 @@ import CircleIcon from "@mui/icons-material/Circle";
 import { Box } from "@mui/system";
 import { useNavigate } from "react-router-dom";
 
-const HomeScreen = () => {
+const HomeScreen = ({changeTheme}) => {
 
   const navigate = useNavigate();
 
@@ -31,7 +31,7 @@ const HomeScreen = () => {
         <Box mt={2} />
         <Typography align="left" variant="h4">
           Desarrollador web{" "}
-          <Link color={"#E2E2E2"} style={{ cursor: "pointer" }}>
+          <Link color={changeTheme ? "#E2E2E2" : "#050038"} style={{ cursor: "pointer" }}>
             CV
           </Link>
         </Typography>
@@ -41,7 +41,7 @@ const HomeScreen = () => {
             <li>
               <CircleIcon />
               <Link
-                color={"#E2E2E2"}
+                color={changeTheme ? "#E2E2E2" : "#050038"}
                 style={{ cursor: "pointer" }}
                 onClick={handleAbout}
               >
@@ -51,7 +51,7 @@ const HomeScreen = () => {
             <li>
               <CircleIcon />
               <Link
-                color={"#E2E2E2"}
+                color={changeTheme ? "#E2E2E2" : "#050038"}
                 style={{ cursor: "pointer" }}
                 onClick={handleProjects}
               >
