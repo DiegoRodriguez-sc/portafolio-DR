@@ -8,7 +8,7 @@ import ProjectScreen from "../pages/ProjectScreen";
 const AppRoute = () => {
   return (
     <BrowserRouter>
-      <Box sx={{ backgroundColor: "#131313", color:"#E2E2E2" ,width: "100vw", height: "100vh" }}>
+      <Box sx={{ backgroundColor: "#131313", color:"#E2E2E2" ,maxWidth: "100vw" }}>
         <Routes>
           <Route path="/about" element={<AboutScreen />} />
           <Route path="/projects" element={<ProjectScreen />} />
