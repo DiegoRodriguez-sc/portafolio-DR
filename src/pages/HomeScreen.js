@@ -3,19 +3,23 @@ import { Container, Link, Typography } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
 import { Box } from "@mui/system";
 import { useNavigate } from "react-router-dom";
+import curriculum from "../assets/pdf/Diego-rodriguez-cv.pdf";
 
-const HomeScreen = ({changeTheme}) => {
-
+const HomeScreen = ({ changeTheme }) => {
   const navigate = useNavigate();
 
-  const handleAbout = () => {navigate("/about")};
-  const handleProjects = () => {navigate("/projects")};
+  const handleAbout = () => {
+    navigate("/about");
+  };
+  const handleProjects = () => {
+    navigate("/projects");
+  };
 
   return (
     <Container
       maxWidth="sm"
       sx={{
-        height:"95.1vh",
+        height: "95.1vh",
         display: "flex",
         alignItems: "center",
       }}
@@ -31,7 +35,14 @@ const HomeScreen = ({changeTheme}) => {
         <Box mt={2} />
         <Typography align="left" variant="h4">
           Desarrollador web{" "}
-          <Link color={changeTheme ? "#E2E2E2" : "#050038"} style={{ cursor: "pointer" }}>
+          <Link
+            ref={curriculum}
+            target={"_blank"}
+            download={"Diego Rodriguez"}
+            rel="noreferrer"
+            color={changeTheme ? "#E2E2E2" : "#050038"}
+            style={{ cursor: "pointer" }}
+          >
             CV
           </Link>
         </Typography>
