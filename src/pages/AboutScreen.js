@@ -163,14 +163,21 @@ const AboutScreen = ({ changeTheme }) => {
             color: changeTheme ? "#E2E2E2" : "#050038",
             display: "flex",
             justifyContent: "flex-start",
+            cursor:"pointer"
           }}
+          onClick={() =>
+            window.open(
+              "https://drive.google.com/drive/folders/1NuQnVkpBzT41MCxk9Uwfe_1LcBKLEx-1?usp=sharing",
+              "__blank"
+            )
+          }
         >
           <Box sx={{ display: "flex" }}>
             <Box
               marginLeft={2}
               component="img"
               sx={{ width: "60px" }}
-              alt={"logo email"}
+              alt={"logo web"}
               src={web}
             />
             <Typography
