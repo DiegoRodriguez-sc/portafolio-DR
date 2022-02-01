@@ -39,6 +39,7 @@ const AboutScreen = ({ changeTheme }) => {
         <Box mb={2} />
         <Box
           component="img"
+          loading="lazy"
           sx={{ width: "100%" }}
           alt={"foto de perfil"}
           src={photo}
