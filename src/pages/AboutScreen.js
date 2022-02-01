@@ -46,8 +46,8 @@ const AboutScreen = ({ changeTheme }) => {
         />
         <Box mb={2} />
         <Typography paragraph={true} variant="h4">
-          Mi nombre es Diego Rodriguez, soy desarrollador web y tambien
-          estudiante de Lic. en Sistemas en{" "}
+          Mi nombre es Diego Rodriguez, soy desarrollador web y estudiante de
+          Lic. en Sistemas en{" "}
           <Link
             color={changeTheme ? "#E2E2E2" : "#050038"}
             style={{ cursor: "pointer", fontSize: "2rem" }}
@@ -92,9 +92,11 @@ const AboutScreen = ({ changeTheme }) => {
             color: changeTheme ? "#E2E2E2" : "#050038",
             display: "flex",
             justifyContent: "flex-start",
-            cursor:"pointer"
+            cursor: "pointer",
           }}
-          onClick={()=> window.open('https://github.com/DiegoRodriguez-sc', '__blank')}
+          onClick={() =>
+            window.open("https://github.com/DiegoRodriguez-sc", "__blank")
+          }
         >
           <Box sx={{ display: "flex" }}>
             <Box
@@ -124,9 +126,14 @@ const AboutScreen = ({ changeTheme }) => {
             color: changeTheme ? "#E2E2E2" : "#050038",
             display: "flex",
             justifyContent: "flex-start",
-            cursor:"pointer"
+            cursor: "pointer",
           }}
-          onClick={()=> window.open("https://www.linkedin.com/in/diego-rodriguez-sc/" , '__blank')}
+          onClick={() =>
+            window.open(
+              "https://www.linkedin.com/in/diego-rodriguez-sc/",
+              "__blank"
+            )
+          }
         >
           <Box sx={{ display: "flex" }}>
             <Box

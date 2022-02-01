@@ -39,10 +39,10 @@ const ProjectScreen = ({ changeTheme }) => {
         </Link>
         <Box mb={5} />
         <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-          Mis projectos
+          Mis proyectos
         </Typography>
         <Box mb={2} />
-        <Typography variant="h4">Estos son algunos de mis proyectos</Typography>
+        <Typography variant="h4">Estos son algunos de mis proyectos..</Typography>
         <Box mb={3} />
         <Box
           sx={{
