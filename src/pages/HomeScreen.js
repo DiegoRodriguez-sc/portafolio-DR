@@ -36,10 +36,8 @@ const HomeScreen = ({ changeTheme }) => {
         <Typography align="left" variant="h4">
           Desarrollador web{" "}
           <Link
-            ref={curriculum}
+            href={curriculum}
             target={"_blank"}
-            download={"Diego Rodriguez"}
-            rel="noreferrer"
             color={changeTheme ? "#E2E2E2" : "#050038"}
             style={{ cursor: "pointer" }}
           >
@@ -66,7 +64,7 @@ const HomeScreen = ({ changeTheme }) => {
                 style={{ cursor: "pointer" }}
                 onClick={handleProjects}
               >
-                Projectos
+                Proyectos
               </Link>
             </li>
           </ul>
