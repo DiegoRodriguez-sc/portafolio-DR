@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import { data } from "../helpers/data";
 
-const ProjectScreen = () => {
+const ProjectScreen = ({ changeTheme }) => {
   const navigate = useNavigate();
   const handleBack = () => {
     navigate("/");
@@ -31,7 +31,7 @@ const ProjectScreen = () => {
       <Box width={"100%"}>
         <Box mb={10} />
         <Link
-          color={"#E2E2E2"}
+          color={changeTheme ? "#E2E2E2" : "#050038"}
           style={{ cursor: "pointer", fontSize: "2rem" }}
           onClick={handleBack}
         >
@@ -42,11 +42,30 @@ const ProjectScreen = () => {
           Mis projectos
         </Typography>
         <Box mb={2} />
-        <Typography>Estos son mis projectos.....</Typography>
-        <Box mb={2} />
-        <Box sx={{display:"flex", flexWrap:"wrap", gap:2, justifyContent:"center"}}>
+        <Typography variant="h4">Estos son algunos de mis proyectos</Typography>
+        <Box mb={3} />
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 2,
+            justifyContent: "center",
+          }}
+        >
           {data.map((pr) => (
-            <Card key={pr.title} sx={{ width:{xs:345, md:265}, bgcolor:"#1C1C1C", color:"#E2E2E2"}}>
+            <Card
+              key={pr.title}
+              sx={{
+                width: { xs: 345, md: 267 },
+                bgcolor: changeTheme ? "#1C1C1C" : "#CCCCCC",
+                color: changeTheme ? "#E2E2E2" : "#050038",
+                display:"flex",
+                flexDirection:"column",
+                justifyContent:"space-between"
+              }}
+            >
+            <div>
+
               <CardMedia
                 component="img"
                 height="140"
@@ -54,20 +73,50 @@ const ProjectScreen = () => {
                 alt={pr.title}
               />
               <CardContent>
-                <Typography gutterBottom variant="h4" component="div" color={"#E2E2E2"}>
+                <Typography
+                  gutterBottom
+                  variant="h4"
+                  component="div"
+                  color={changeTheme ? "#E2E2E2" : "#050038"}
+                >
                   {pr.title}
                 </Typography>
-                <Typography variant="h5" color={"#E2E2E2"}>
+                <Typography variant="body2"> 
+                   {pr.small}
+                </Typography>
+                <Box mb={1} />
+                <Typography
+                  variant="h5"
+                  color={changeTheme ? "#E2E2E2" : "#050038"}
+                >
                   {pr.p}
                 </Typography>
               </CardContent>
+            </div>
               <CardActions>
-                <Button size="medium">Repo</Button>
-                <Button size="medium">Demo</Button>
+                <Button
+                  sx={{
+                    bgcolor: changeTheme ? "#242424" : "#BABABA",
+                    color: changeTheme ? "#E2E2E2" : "#050038",
+                  }}
+                  size="medium"
+                >
+                  Repo
+                </Button>
+                {pr.link && <Button
+                  sx={{
+                    bgcolor: changeTheme ? "#242424" : "#BABABA",
+                    color: changeTheme ? "#E2E2E2" : "#050038",
+                  }}
+                  size="medium"
+                >
+                  Demo
+                </Button>}
               </CardActions>
             </Card>
           ))}
         </Box>
+        <Box mb={3} />
       </Box>
     </Container>
   );
