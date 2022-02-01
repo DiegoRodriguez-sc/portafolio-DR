@@ -42,7 +42,9 @@ const ProjectScreen = ({ changeTheme }) => {
           Mis proyectos
         </Typography>
         <Box mb={2} />
-        <Typography variant="h4">Estos son algunos de mis proyectos..</Typography>
+        <Typography variant="h4">
+          Estos son algunos de mis proyectos..
+        </Typography>
         <Box mb={3} />
         <Box
           sx={{
@@ -59,40 +61,37 @@ const ProjectScreen = ({ changeTheme }) => {
                 width: { xs: 345, md: 267 },
                 bgcolor: changeTheme ? "#1C1C1C" : "#CCCCCC",
                 color: changeTheme ? "#E2E2E2" : "#050038",
-                display:"flex",
-                flexDirection:"column",
-                justifyContent:"space-between"
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
               }}
             >
-            <div>
-
-              <CardMedia
-                component="img"
-                height="140"
-                image={pr.img}
-                alt={pr.title}
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h4"
-                  component="div"
-                  color={changeTheme ? "#E2E2E2" : "#050038"}
-                >
-                  {pr.title}
-                </Typography>
-                <Typography variant="body2"> 
-                   {pr.small}
-                </Typography>
-                <Box mb={1} />
-                <Typography
-                  variant="h5"
-                  color={changeTheme ? "#E2E2E2" : "#050038"}
-                >
-                  {pr.p}
-                </Typography>
-              </CardContent>
-            </div>
+              <div>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={pr.img}
+                  alt={pr.title}
+                />
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    variant="h4"
+                    component="div"
+                    color={changeTheme ? "#E2E2E2" : "#050038"}
+                  >
+                    {pr.title}
+                  </Typography>
+                  <Typography variant="body2">{pr.small}</Typography>
+                  <Box mb={1} />
+                  <Typography
+                    variant="h5"
+                    color={changeTheme ? "#E2E2E2" : "#050038"}
+                  >
+                    {pr.p}
+                  </Typography>
+                </CardContent>
+              </div>
               <CardActions>
                 <Button
                   sx={{
@@ -100,18 +99,22 @@ const ProjectScreen = ({ changeTheme }) => {
                     color: changeTheme ? "#E2E2E2" : "#050038",
                   }}
                   size="medium"
+                  onClick={() => window.open(pr.repo, "__blank")}
                 >
                   Repo
                 </Button>
-                {pr.link && <Button
-                  sx={{
-                    bgcolor: changeTheme ? "#242424" : "#BABABA",
-                    color: changeTheme ? "#E2E2E2" : "#050038",
-                  }}
-                  size="medium"
-                >
-                  Demo
-                </Button>}
+                {pr.link && (
+                  <Button
+                    sx={{
+                      bgcolor: changeTheme ? "#242424" : "#BABABA",
+                      color: changeTheme ? "#E2E2E2" : "#050038",
+                    }}
+                    size="medium"
+                    onClick={() => window.open(pr.link, "__blank")}
+                  >
+                    Demo
+                  </Button>
+                )}
               </CardActions>
             </Card>
           ))}
