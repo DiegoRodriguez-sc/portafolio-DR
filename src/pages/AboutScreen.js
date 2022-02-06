@@ -4,7 +4,7 @@ import photo from "../assets/photo.jpg";
 import gmail from "../assets/gmail.svg";
 import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin.svg";
-import web from "../assets/web.svg";
+import cv from "../assets/cv.svg";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -92,11 +92,7 @@ const AboutScreen = ({ changeTheme }) => {
             color: changeTheme ? "#E2E2E2" : "#050038",
             display: "flex",
             justifyContent: "flex-start",
-            cursor: "pointer",
           }}
-          onClick={() =>
-            window.open("https://github.com/DiegoRodriguez-sc", "__blank")
-          }
         >
           <Box sx={{ display: "flex" }}>
             <Box
@@ -106,16 +102,23 @@ const AboutScreen = ({ changeTheme }) => {
               alt={"logo github"}
               src={github}
             />
-            <Typography
-              sx={{
-                lineHeight: 5.5,
-                textTransform: "uppercase",
-                fontSize: "2vh",
-                marginLeft: 0.5,
-              }}
+            <Link
+              color={changeTheme ? "#E2E2E2" : "#050038"}
+              style={{ cursor: "pointer" }}
+              href={"https://github.com/DiegoRodriguez-sc"}
+              target="_blank"
             >
-              DiegoRodriguez-sc
-            </Typography>
+              <Typography
+                sx={{
+                  lineHeight: 5.5,
+                  textTransform: "uppercase",
+                  fontSize: "2vh",
+                  marginLeft: 0.5,
+                }}
+              >
+                DiegoRodriguez-sc
+              </Typography>
+            </Link>
           </Box>
         </Paper>
         <Box mb={2} />
@@ -163,7 +166,7 @@ const AboutScreen = ({ changeTheme }) => {
             color: changeTheme ? "#E2E2E2" : "#050038",
             display: "flex",
             justifyContent: "flex-start",
-            cursor:"pointer"
+            cursor: "pointer",
           }}
           onClick={() =>
             window.open(
@@ -177,8 +180,8 @@ const AboutScreen = ({ changeTheme }) => {
               marginLeft={2}
               component="img"
               sx={{ width: "60px" }}
-              alt={"logo web"}
-              src={web}
+              alt={"logo cv"}
+              src={cv}
             />
             <Typography
               sx={{
