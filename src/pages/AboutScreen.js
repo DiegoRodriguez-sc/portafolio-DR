@@ -129,14 +129,7 @@ const AboutScreen = ({ changeTheme }) => {
             color: changeTheme ? "#E2E2E2" : "#050038",
             display: "flex",
             justifyContent: "flex-start",
-            cursor: "pointer",
           }}
-          onClick={() =>
-            window.open(
-              "https://www.linkedin.com/in/diego-rodriguez-sc/",
-              "__blank"
-            )
-          }
         >
           <Box sx={{ display: "flex" }}>
             <Box
@@ -146,16 +139,23 @@ const AboutScreen = ({ changeTheme }) => {
               alt={"logo linkedin"}
               src={linkedin}
             />
-            <Typography
-              sx={{
-                lineHeight: 5.5,
-                textTransform: "uppercase",
-                fontSize: "2vh",
-                marginLeft: 0.5,
-              }}
+            <Link
+              color={changeTheme ? "#E2E2E2" : "#050038"}
+              style={{ cursor: "pointer" }}
+              href={"https://www.linkedin.com/in/diego-rodriguez-sc/"}
+              target="_blank"
             >
-              Diego-Rodriguez-sc
-            </Typography>
+              <Typography
+                sx={{
+                  lineHeight: 5.5,
+                  textTransform: "uppercase",
+                  fontSize: "2vh",
+                  marginLeft: 0.5,
+                }}
+              >
+                Diego-Rodriguez-sc
+              </Typography>
+            </Link>
           </Box>
         </Paper>
         <Box mb={2} />
@@ -166,14 +166,7 @@ const AboutScreen = ({ changeTheme }) => {
             color: changeTheme ? "#E2E2E2" : "#050038",
             display: "flex",
             justifyContent: "flex-start",
-            cursor: "pointer",
           }}
-          onClick={() =>
-            window.open(
-              "https://drive.google.com/drive/folders/1NuQnVkpBzT41MCxk9Uwfe_1LcBKLEx-1?usp=sharing",
-              "__blank"
-            )
-          }
         >
           <Box sx={{ display: "flex" }}>
             <Box
@@ -183,16 +176,25 @@ const AboutScreen = ({ changeTheme }) => {
               alt={"logo cv"}
               src={cv}
             />
-            <Typography
-              sx={{
-                lineHeight: 5.5,
-                textTransform: "uppercase",
-                fontSize: "2vh",
-                marginLeft: 0.5,
-              }}
+            <Link
+              color={changeTheme ? "#E2E2E2" : "#050038"}
+              style={{ cursor: "pointer" }}
+              href={
+                "https://drive.google.com/drive/folders/1NuQnVkpBzT41MCxk9Uwfe_1LcBKLEx-1?usp=sharing"
+              }
+              target="_blank"
             >
-              Diego Rodriguez
-            </Typography>
+              <Typography
+                sx={{
+                  lineHeight: 5.5,
+                  textTransform: "uppercase",
+                  fontSize: "2vh",
+                  marginLeft: 0.5,
+                }}
+              >
+                Diego Rodriguez
+              </Typography>
+            </Link>
           </Box>
         </Paper>
         <Box mb={2} />
@@ -213,16 +215,23 @@ const AboutScreen = ({ changeTheme }) => {
               alt={"logo email"}
               src={gmail}
             />
-            <Typography
-              sx={{
-                lineHeight: 5.5,
-                textTransform: "uppercase",
-                fontSize: "2vh",
-                marginLeft: 0.5,
-              }}
+            <Link
+              color={changeTheme ? "#E2E2E2" : "#050038"}
+              style={{ cursor: "pointer" }}
+              href={"mailto:diego.rodriguez.sc@gmail.com"}
+              target="_blank"
             >
-              Diego.Rodriguez.sc@gmail.com
-            </Typography>
+              <Typography
+                sx={{
+                  lineHeight: 5.5,
+                  textTransform: "uppercase",
+                  fontSize: "2vh",
+                  marginLeft: 0.5,
+                }}
+              >
+                Diego.Rodriguez.sc@gmail.com
+              </Typography>
+            </Link>
           </Box>
         </Paper>
         <Box mb={2} />
