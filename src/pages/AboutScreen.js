@@ -2,9 +2,9 @@ import { Container, Link, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import photo from "../assets/photo.jpg";
 import gmail from "../assets/gmail.svg";
-import github from "../assets/github.svg";
-import linkedin from "../assets/linkedin.svg";
-import cv from "../assets/cv.svg";
+import lk from "../assets/lk.svg";
+import gh from "../assets/gh.svg";
+import ce from "../assets/ce.svg";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -100,7 +100,7 @@ const AboutScreen = ({ changeTheme }) => {
               component="img"
               sx={{ width: "60px" }}
               alt={"logo github"}
-              src={github}
+              src={gh}
             />
             <Link
               color={changeTheme ? "#E2E2E2" : "#050038"}
@@ -137,7 +137,7 @@ const AboutScreen = ({ changeTheme }) => {
               component="img"
               sx={{ width: "60px" }}
               alt={"logo linkedin"}
-              src={linkedin}
+              src={lk}
             />
             <Link
               color={changeTheme ? "#E2E2E2" : "#050038"}
@@ -173,8 +173,8 @@ const AboutScreen = ({ changeTheme }) => {
               marginLeft={2}
               component="img"
               sx={{ width: "60px" }}
-              alt={"logo cv"}
-              src={cv}
+              alt={"logo certified"}
+              src={ce}
             />
             <Link
               color={changeTheme ? "#E2E2E2" : "#050038"}
