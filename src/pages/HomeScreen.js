@@ -14,12 +14,15 @@ const HomeScreen = ({ changeTheme }) => {
   const handleProjects = () => {
     navigate("/projects");
   };
+  const handleGame = () => {
+    navigate("/game");
+  };
 
   return (
     <Container
       maxWidth="sm"
       sx={{
-        height: "95.1vh",
+        height: "95vh",
         display: "flex",
         alignItems: "center",
       }}
@@ -65,6 +68,16 @@ const HomeScreen = ({ changeTheme }) => {
                 onClick={handleProjects}
               >
                 Proyectos
+              </Link>
+            </li>
+            <li>
+              <CircleIcon />
+              <Link
+                color={changeTheme ? "#E2E2E2" : "#050038"}
+                style={{ cursor: "pointer" }}
+                onClick={handleGame}
+              >
+                Game
               </Link>
             </li>
           </ul>

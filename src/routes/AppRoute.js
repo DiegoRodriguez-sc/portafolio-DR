@@ -5,6 +5,7 @@ import AboutScreen from "../pages/AboutScreen";
 import HomeScreen from "../pages/HomeScreen";
 import ProjectScreen from "../pages/ProjectScreen";
 import NavBar from "../components/Navbar";
+import GameScreen from "../pages/GameScreen";
 
 const AppRoute = () => {
   const [changeTheme, setChangeTheme] = useState(true);
@@ -28,6 +29,10 @@ const AppRoute = () => {
           <Route
             path="/projects"
             element={<ProjectScreen changeTheme={changeTheme} />}
+          />
+          <Route
+            path="/game"
+            element={<GameScreen changeTheme={changeTheme} />}
           />
           <Route path="/" element={<HomeScreen changeTheme={changeTheme} />} />
         </Routes>
