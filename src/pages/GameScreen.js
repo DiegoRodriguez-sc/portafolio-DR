@@ -1,10 +1,18 @@
 import React, { useState } from "react";
-import { Container } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { Container, Link, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
+import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
 import GenNum from "../components/game/GenNum";
+import InputNum from "../components/game/InputNum";
+import Instructions from "../components/game/Instructions";
 
-const GameScreen = ({changeTheme}) => {
+const GameScreen = ({ changeTheme }) => {
+  const [openI, setopenI] = useState(true);
+  const navigate = useNavigate();
+  const handleBack = () => {
+    navigate("/");
+  };
   const randomGenerate = (digit) => {
     let max = Math.pow(10, digit) - 1,
       min = Math.pow(10, digit - 1);
@@ -36,7 +44,7 @@ const GameScreen = ({changeTheme}) => {
     if (userNumber === currQuestion) {
       if (subLevel < 3) {
         ++subLevel;
-      } else if (subLevel == 3) {
+      } else if (subLevel === 3) {
         ++mainLevel;
         subLevel = 1;
       }
@@ -52,23 +60,53 @@ const GameScreen = ({changeTheme}) => {
     });
   };
 
+  const handleClose = () => {
+    setopenI(!openI);
+    resetState();
+  };
+
   return (
     <Container
       maxWidth="sm"
       sx={{
-        height: "95vh",
+        height: "100vh",
         display: "flex",
         justifyContent: "center",
       }}
     >
       <Box width={"100%"} textAlign="center">
-        <VideogameAssetIcon  sx={{fontSize:"250px"}} />
+        <Instructions
+          open={openI}
+          handleClose={handleClose}
+          changeTheme={changeTheme}
+        />
+        <Box width={"100%"} textAlign="start" mt={5}>
+          <Link
+            color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
+            style={{ cursor: "pointer", fontSize: "2rem" }}
+            onClick={handleBack}
+          >
+            back
+          </Link>
+        </Box>
+
+        <VideogameAssetIcon sx={{ fontSize: "250px" }} />
+        <Typography variant="h3">
+          Escribe el número que ves entre las barras, facil verdad?
+        </Typography>
         <Box>
           <GenNum
             question={stateGame.question}
             level={stateGame.level}
             wrong={stateGame.wrong}
-												changeTheme={changeTheme}
+            changeTheme={changeTheme}
+          />
+          <Box mt={2} />
+          <InputNum
+            compareUserInput={compareUserInput}
+            wrong={stateGame.wrong}
+            onReset={resetState}
+            changeTheme={changeTheme}
           />
         </Box>
       </Box>

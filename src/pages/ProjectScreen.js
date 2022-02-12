@@ -31,7 +31,7 @@ const ProjectScreen = ({ changeTheme }) => {
       <Box width={"100%"}>
         <Box mb={10} />
         <Link
-          color={changeTheme ? "#E2E2E2" : "#050038"}
+          color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
           style={{ cursor: "pointer", fontSize: "2rem" }}
           onClick={handleBack}
         >
@@ -59,8 +59,8 @@ const ProjectScreen = ({ changeTheme }) => {
               key={pr.title}
               sx={{
                 width: { xs: 345, md: 267 },
-                bgcolor: changeTheme ? "#1C1C1C" : "#CCCCCC",
-                color: changeTheme ? "#E2E2E2" : "#050038",
+                bgcolor: changeTheme === "dark" ? "#1C1C1C" : "#CCCCCC",
+                color: changeTheme === "dark" ? "#E2E2E2" : "#050038",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
@@ -78,7 +78,7 @@ const ProjectScreen = ({ changeTheme }) => {
                     gutterBottom
                     variant="h4"
                     component="div"
-                    color={changeTheme ? "#E2E2E2" : "#050038"}
+                    color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
                   >
                     {pr.title}
                   </Typography>
@@ -86,7 +86,7 @@ const ProjectScreen = ({ changeTheme }) => {
                   <Box mb={1} />
                   <Typography
                     variant="h5"
-                    color={changeTheme ? "#E2E2E2" : "#050038"}
+                    color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
                   >
                     {pr.p}
                   </Typography>
@@ -95,8 +95,8 @@ const ProjectScreen = ({ changeTheme }) => {
               <CardActions>
                 <Button
                   sx={{
-                    bgcolor: changeTheme ? "#242424" : "#BABABA",
-                    color: changeTheme ? "#E2E2E2" : "#050038",
+                    bgcolor: changeTheme === "dark" ? "#242424" : "#BABABA",
+                    color: changeTheme === "dark" ? "#E2E2E2" : "#050038",
                   }}
                   size="medium"
                   onClick={() => window.open(pr.repo, "__blank")}
@@ -106,8 +106,8 @@ const ProjectScreen = ({ changeTheme }) => {
                 {pr.link && (
                   <Button
                     sx={{
-                      bgcolor: changeTheme ? "#242424" : "#BABABA",
-                      color: changeTheme ? "#E2E2E2" : "#050038",
+                      bgcolor: changeTheme === "dark" ? "#242424" : "#BABABA",
+                      color: changeTheme === "dark" ? "#E2E2E2" : "#050038",
                     }}
                     size="medium"
                     onClick={() => window.open(pr.link, "__blank")}

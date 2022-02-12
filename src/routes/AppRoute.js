@@ -8,19 +8,21 @@ import NavBar from "../components/Navbar";
 import GameScreen from "../pages/GameScreen";
 
 const AppRoute = () => {
-  const [changeTheme, setChangeTheme] = useState(true);
+  
+  const tema = localStorage.getItem("theme") || "dark";
+  const [changeTheme, setChangeTheme] = useState(tema);
   //light mode bgColor:"#E2E2E2", color:"#050038" , card :"#CCCCCC"
   //dark mode
   return (
     <BrowserRouter>
       <Box
         sx={{
-          backgroundColor: changeTheme ? "#131313" : "#E2E2E2",
-          color: changeTheme ? "#E2E2E2" : "#050038",
+          backgroundColor: changeTheme === "dark" ? "#131313" : "#E2E2E2",
+          color: changeTheme === "dark" ? "#E2E2E2" : "#050038",
           maxWidth: "100vw",
         }}
       >
-        <NavBar setChangeTheme={setChangeTheme} />
+        <NavBar setChangeTheme={setChangeTheme} changeTheme={changeTheme} />
         <Routes>
           <Route
             path="/about"

@@ -41,7 +41,7 @@ const HomeScreen = ({ changeTheme }) => {
           <Link
             href={curriculum}
             target={"_blank"}
-            color={changeTheme ? "#E2E2E2" : "#050038"}
+            color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
             style={{ cursor: "pointer" }}
           >
             CV
@@ -53,27 +53,29 @@ const HomeScreen = ({ changeTheme }) => {
             <li>
               <CircleIcon />
               <Link
-                color={changeTheme ? "#E2E2E2" : "#050038"}
+                color={changeTheme  === "dark" ? "#E2E2E2" : "#050038"}
                 style={{ cursor: "pointer" }}
                 onClick={handleAbout}
               >
                 Sobre mi
               </Link>
             </li>
+            <Box mt={.5} />
             <li>
               <CircleIcon />
               <Link
-                color={changeTheme ? "#E2E2E2" : "#050038"}
+                color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
                 style={{ cursor: "pointer" }}
                 onClick={handleProjects}
               >
                 Proyectos
               </Link>
             </li>
+            <Box mt={.5} />
             <li>
               <CircleIcon />
               <Link
-                color={changeTheme ? "#E2E2E2" : "#050038"}
+                color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
                 style={{ cursor: "pointer" }}
                 onClick={handleGame}
               >

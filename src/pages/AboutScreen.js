@@ -26,7 +26,7 @@ const AboutScreen = ({ changeTheme }) => {
       <Box width={"100%"}>
         <Box mb={10} />
         <Link
-          color={changeTheme ? "#E2E2E2" : "#050038"}
+          color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
           style={{ cursor: "pointer", fontSize: "2rem" }}
           onClick={handleBack}
         >
@@ -49,7 +49,7 @@ const AboutScreen = ({ changeTheme }) => {
           Mi nombre es Diego Rodriguez, soy desarrollador web y estudiante de
           Lic. en Sistemas en{" "}
           <Link
-            color={changeTheme ? "#E2E2E2" : "#050038"}
+            color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
             style={{ cursor: "pointer", fontSize: "2rem" }}
             href="https://www.info.unlp.edu.ar/"
             target={"_blank"}
@@ -88,13 +88,13 @@ const AboutScreen = ({ changeTheme }) => {
         <Paper
           sx={{
             height: 90,
-            bgcolor: changeTheme ? "#1C1C1C" : "#CCCCCC",
-            color: changeTheme ? "#E2E2E2" : "#050038",
+            bgcolor: changeTheme === "dark" ? "#1C1C1C" : "#CCCCCC",
+            color: changeTheme === "dark" ? "#E2E2E2" : "#050038",
             display: "flex",
             justifyContent: "flex-start",
           }}
         >
-          <Box sx={{ display: "flex" }}>
+          <Box sx={{ display: "flex", alignItems:"center" }}>
             <Box
               marginLeft={2}
               component="img"
@@ -103,14 +103,13 @@ const AboutScreen = ({ changeTheme }) => {
               src={gh}
             />
             <Link
-              color={changeTheme ? "#E2E2E2" : "#050038"}
+              color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
               style={{ cursor: "pointer" }}
               href={"https://github.com/DiegoRodriguez-sc"}
               target="_blank"
             >
               <Typography
                 sx={{
-                  lineHeight: 5.5,
                   textTransform: "uppercase",
                   fontSize: "2vh",
                   marginLeft: 0.5,
@@ -125,13 +124,13 @@ const AboutScreen = ({ changeTheme }) => {
         <Paper
           sx={{
             height: 90,
-            bgcolor: changeTheme ? "#1C1C1C" : "#CCCCCC",
-            color: changeTheme ? "#E2E2E2" : "#050038",
+            bgcolor: changeTheme === "dark" ? "#1C1C1C" : "#CCCCCC",
+            color: changeTheme === "dark" ? "#E2E2E2" : "#050038",
             display: "flex",
             justifyContent: "flex-start",
           }}
         >
-          <Box sx={{ display: "flex" }}>
+          <Box sx={{ display: "flex", alignItems:"center" }}>
             <Box
               marginLeft={2}
               component="img"
@@ -140,14 +139,13 @@ const AboutScreen = ({ changeTheme }) => {
               src={lk}
             />
             <Link
-              color={changeTheme ? "#E2E2E2" : "#050038"}
+              color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
               style={{ cursor: "pointer" }}
               href={"https://www.linkedin.com/in/diego-rodriguez-sc/"}
               target="_blank"
             >
               <Typography
                 sx={{
-                  lineHeight: 5.5,
                   textTransform: "uppercase",
                   fontSize: "2vh",
                   marginLeft: 0.5,
@@ -162,22 +160,22 @@ const AboutScreen = ({ changeTheme }) => {
         <Paper
           sx={{
             height: 90,
-            bgcolor: changeTheme ? "#1C1C1C" : "#CCCCCC",
-            color: changeTheme ? "#E2E2E2" : "#050038",
+            bgcolor: changeTheme === "dark" ? "#1C1C1C" : "#CCCCCC",
+            color: changeTheme === "dark" ? "#E2E2E2" : "#050038",
             display: "flex",
             justifyContent: "flex-start",
           }}
         >
-          <Box sx={{ display: "flex" }}>
+          <Box sx={{ display: "flex", alignItems:"center" }}>
             <Box
               marginLeft={2}
               component="img"
-              sx={{ width: "60px" }}
+              sx={{ width: "60px"}}
               alt={"logo certified"}
               src={ce}
             />
             <Link
-              color={changeTheme ? "#E2E2E2" : "#050038"}
+              color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
               style={{ cursor: "pointer" }}
               href={
                 "https://drive.google.com/drive/folders/1NuQnVkpBzT41MCxk9Uwfe_1LcBKLEx-1?usp=sharing"
@@ -186,7 +184,6 @@ const AboutScreen = ({ changeTheme }) => {
             >
               <Typography
                 sx={{
-                  lineHeight: 5.5,
                   textTransform: "uppercase",
                   fontSize: "2vh",
                   marginLeft: 0.5,
@@ -201,13 +198,13 @@ const AboutScreen = ({ changeTheme }) => {
         <Paper
           sx={{
             height: 90,
-            bgcolor: changeTheme ? "#1C1C1C" : "#CCCCCC",
-            color: changeTheme ? "#E2E2E2" : "#050038",
+            bgcolor: changeTheme === "dark" ? "#1C1C1C" : "#CCCCCC",
+            color: changeTheme === "dark" ? "#E2E2E2" : "#050038",
             display: "flex",
             justifyContent: "flex-start",
           }}
         >
-          <Box sx={{ display: "flex" }}>
+          <Box sx={{ display: "flex", alignItems:"center" }}>
             <Box
               marginLeft={2}
               component="img"
@@ -216,14 +213,13 @@ const AboutScreen = ({ changeTheme }) => {
               src={gmail}
             />
             <Link
-              color={changeTheme ? "#E2E2E2" : "#050038"}
+              color={changeTheme  === "dark" ? "#E2E2E2" : "#050038"}
               style={{ cursor: "pointer" }}
               href={"mailto:diego.rodriguez.sc@gmail.com"}
               target="_blank"
             >
               <Typography
                 sx={{
-                  lineHeight: 5.5,
                   textTransform: "uppercase",
                   fontSize: "2vh",
                   marginLeft: 0.5,

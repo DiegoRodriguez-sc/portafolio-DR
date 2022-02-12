@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { Box, Container, Typography } from "@mui/material";
 
-const NavBar = ({setChangeTheme}) => {
-  const [theme, setTheme] = useState(true);
+const NavBar = ({setChangeTheme, changeTheme}) => {
+
   const mydate = new Date(),
     day = mydate.getDay();
 
@@ -21,8 +21,13 @@ const NavBar = ({setChangeTheme}) => {
   let time = dayArray[day] + " " + mydate.toLocaleTimeString().slice(0, -3);
 
   const handleTheme = () => {
-     setTheme(!theme);
-     setChangeTheme(!theme);
+    if(changeTheme === "dark"){
+      setChangeTheme("light");
+      localStorage.setItem("theme", "light");
+    }else{
+      setChangeTheme("dark");
+      localStorage.setItem("theme", "dark");
+    }
   }
   return (
     <Container maxWidth="sm" sx={{ pt: 3 }}>
@@ -33,7 +38,7 @@ const NavBar = ({setChangeTheme}) => {
 
         <Box component="div" sx={{ cursor: "pointer" }} onClick={handleTheme}>
            {
-            theme 
+            changeTheme === "dark"
               ? (<WbSunnyIcon style={{ fontSize: 25 }} />)
               : (<DarkModeIcon style={{ fontSize: 25 }} />)
            }
