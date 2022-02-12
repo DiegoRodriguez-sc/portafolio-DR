@@ -8,7 +8,7 @@ import ppT from "../assets/projects/piedra-papel-tijera.png";
 //------------------------------------------------------------------------
 import pokedex from "../assets/projects/pokedex.png";
 //------------------------------------------------------------------------
-import countryApp from "../assets/projects/countries-app.png";
+import stripe from "../assets/projects/paymentStripe.PNG";
 //------------------------------------------------------------------------
 import superHeroApp from "../assets/projects/superheroApp2.PNG";
 //------------------------------------------------------------------------
@@ -23,7 +23,7 @@ export const data = [
     title: "Super App.",
     img: superHeroApp,
     tech: "Js css bootstrap React",
-    link: "",
+    link: "https://superh-app.netlify.app/",
     repo: "https://github.com/DiegoRodriguez-sc/super-hero-app",
     small:"CSS + Bootstrap, React.js y React Router.",
     p:"Aplicación para crear un equipo de superhéroes que consumirá una API externa y mostrará diferentes atributos a nivel individual de cada miembro y del equipo consolidado."
@@ -36,6 +36,15 @@ export const data = [
     repo: "https://github.com/FedeHC/ONG-Somos-Mas",
     small:"Node, Express, MongoDB, CSS + Bootstrap, React.js y React Router.",
     p:"Este proyecto fue desarrollado en React a lo largo de 6 semanas junto con un equipo de 5 compañeros durante la aceleración de Alkemy Labs, con el fin de estar job ready al simular un entorno real de trabajo junto con un mentor."
+  },
+  {
+    title: "React Stripe Material UI.",
+    img: stripe,
+    tech: "Js React Material UI node MongoDB",
+    link: "https://react-stripe-materialui.netlify.app/",
+    repo: "https://github.com/DiegoRodriguez-sc/react-stripe",
+    small:"Node, Express, MongoDB, Material UI, React.js y Stripe.",
+    p:"Uso de Stripe con React y material UI."
   },
   {
     title: "Note App.",
@@ -99,14 +108,5 @@ export const data = [
     repo: "https://github.com/DiegoRodriguez-sc/pokedex",
     small:"CSS, React.js y React Router",
     p:"website con la información de Pokemones"
-  },
-  {
-    title: "Countries App.",
-    img: countryApp,
-    tech: "Js css sass React",
-    link: "",
-    repo: "https://github.com/DiegoRodriguez-sc/countries-app",
-    small:"CSS + Sass, React.js y React Router.",
-    p:"App donde se puede ver la información de los paises del mundo"
   },
 ];

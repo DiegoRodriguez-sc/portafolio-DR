@@ -43,7 +43,7 @@ const ProjectScreen = ({ changeTheme }) => {
         </Typography>
         <Box mb={2} />
         <Typography variant="h4">
-          Estos son algunos de mis proyectos..
+          Estos son algunas apps que construí a medida que aprendía en la universidad y desarrollo web..
         </Typography>
         <Box mb={3} />
         <Box
