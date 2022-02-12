@@ -36,8 +36,7 @@ const Instructions = ({ handleClose, open, changeTheme }) => {
           fontSize={20}
           color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
         >
-          Necesitas recordar el número que aparecera entre las barras y asi
-          seguir avanzando de nivel , facil verdad?
+          Necesitas recordar el número que aparecerá entre las barras y así seguir avanzando de nivel, fácil verdad?
         </DialogContentText>
       </DialogContent>
       <DialogActions>

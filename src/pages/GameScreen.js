@@ -69,7 +69,7 @@ const GameScreen = ({ changeTheme }) => {
     <Container
       maxWidth="sm"
       sx={{
-        height: "100vh",
+        minHeight: "100vh",
         display: "flex",
         justifyContent: "center",
       }}
@@ -80,20 +80,20 @@ const GameScreen = ({ changeTheme }) => {
           handleClose={handleClose}
           changeTheme={changeTheme}
         />
-        <Box width={"100%"} textAlign="start" mt={5}>
+        <Box width={"100%"} textAlign="start" mt={10}>
           <Link
             color={changeTheme === "dark" ? "#E2E2E2" : "#050038"}
-            style={{ cursor: "pointer", fontSize: "2rem" }}
+            style={{ cursor: "pointer", fontSize: "2rem"}}
             onClick={handleBack}
           >
             back
           </Link>
         </Box>
-
         <VideogameAssetIcon sx={{ fontSize: "250px" }} />
-        <Typography variant="h3">
-          Escribe el número que ves entre las barras, facil verdad?
+        <Typography variant="h2">
+          Memory Game
         </Typography>
+        <Box mb={3}/>
         <Box>
           <GenNum
             question={stateGame.question}
@@ -101,13 +101,14 @@ const GameScreen = ({ changeTheme }) => {
             wrong={stateGame.wrong}
             changeTheme={changeTheme}
           />
-          <Box mt={2} />
+          <Box mt={2}/>
           <InputNum
             compareUserInput={compareUserInput}
             wrong={stateGame.wrong}
             onReset={resetState}
             changeTheme={changeTheme}
           />
+          <Box mt={2}/>
         </Box>
       </Box>
     </Container>

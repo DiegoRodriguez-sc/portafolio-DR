@@ -31,14 +31,13 @@ const InputNum = ({ compareUserInput, wrong, onReset, changeTheme }) => {
     onReset();
   };
   return (
-    <Box>
+    <Box >
       <form onSubmit={handleUserInput}>
         <Typography variant="h4">El numero es:</Typography>
         {wrong < 3 ? (
           <input
             type="number"
             required
-            autoFocus
             name="valueNumber"
             value={inputValue.valueNumber}
             min={0}
