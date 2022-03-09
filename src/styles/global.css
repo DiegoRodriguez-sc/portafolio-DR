@@ -10,3 +10,19 @@ html {
  margin: 0;
  padding: 0;
 }
+
+body {
+ overflow: scroll;
+ height: 100vh;
+ width: auto;
+ overflow-x: hidden;
+ transition: 1s;
+}
+body::-webkit-scrollbar {
+ width: 7px;
+ background: #131313;
+}
+/* Handle */
+body::-webkit-scrollbar-thumb {
+ background: #E2E2E2;
+}
