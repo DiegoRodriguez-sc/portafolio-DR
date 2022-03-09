@@ -3,7 +3,7 @@ import { Container, Link, Typography } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
 import { Box } from "@mui/system";
 import { useNavigate } from "react-router-dom";
-import curriculum from "../assets/pdf/Diego-rodriguez-cv.pdf";
+import curriculum from "../assets/pdf/Diego-Rodriguez.pdf";
 
 const HomeScreen = ({ changeTheme }) => {
   const navigate = useNavigate();

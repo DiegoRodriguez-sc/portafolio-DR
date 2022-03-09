@@ -17,8 +17,19 @@ import ongWeb from "../assets/projects/ong-app-loading.PNG";
 import eCommerce from "../assets/projects/E-commerce-back.PNG";
 //------------------------------------------------------------------------
 import chatApp from "../assets/projects/Chat-app.PNG";
+//------------------------------------------------------------------------
+import todoApp from "../assets/projects/todo-app.PNG";
 
 export const data = [
+  {
+    title: "TODO App.",
+    img: todoApp,
+    tech: "React Node Tailwindcss MongoDB Express",
+    link: "https://todo-app-dr.vercel.app/",
+    repo: "https://github.com/DiegoRodriguez-sc/todo_app-frontend",
+    small:"React.js, Tailwindcss, Redux, Node.js, Express, MongoDB.",
+    p:"App para crear, organizar, completar tareas e ideas, con registro y logeo de usuarios ."
+  },
   {
     title: "Super App.",
     img: superHeroApp,
