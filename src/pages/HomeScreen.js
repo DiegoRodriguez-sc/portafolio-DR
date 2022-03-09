@@ -4,6 +4,13 @@ import CircleIcon from "@mui/icons-material/Circle";
 import { Box } from "@mui/system";
 import { useNavigate } from "react-router-dom";
 import curriculum from "../assets/pdf/Diego-Rodriguez.pdf";
+import { motion } from "framer-motion";
+
+const animations = {
+  initial: { opacity: 0, x: 100 },
+  animate: { opacity: 1, x: 0, transition: { type: "spring", delay: 0.2 } },
+  exit: { opacity: 0, x: -100 },
+};
 
 const HomeScreen = ({ changeTheme }) => {
   const navigate = useNavigate();
@@ -20,6 +27,12 @@ const HomeScreen = ({ changeTheme }) => {
 
   return (
     <Container
+      component={motion.div}
+      variants={animations}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: .5 }}
       maxWidth="sm"
       sx={{
         height: "95vh",

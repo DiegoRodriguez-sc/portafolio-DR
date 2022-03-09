@@ -7,6 +7,16 @@ import gh from "../assets/gh.svg";
 import ce from "../assets/ce.svg";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
+
+const animations = {
+  initial: { opacity: 0, x: 100 },
+  animate: { opacity: 1, x: 0, transition: { type: "spring", delay: 0.2 } },
+  exit: { opacity: 0, x: -100 },
+};
+
+
 
 const AboutScreen = ({ changeTheme }) => {
   const navigate = useNavigate();
@@ -17,6 +27,12 @@ const AboutScreen = ({ changeTheme }) => {
   return (
     <Container
       maxWidth="sm"
+      component={motion.div}
+      variants={animations}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: .5 }}
       sx={{
         height: "100%",
         display: "flex",

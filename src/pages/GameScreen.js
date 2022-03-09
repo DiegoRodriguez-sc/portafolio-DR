@@ -6,6 +6,16 @@ import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
 import GenNum from "../components/game/GenNum";
 import InputNum from "../components/game/InputNum";
 import Instructions from "../components/game/Instructions";
+import { motion } from "framer-motion";
+
+
+const animations = {
+  initial: { opacity: 0, x: 100 },
+  animate: { opacity: 1, x: 0, transition: { type: "spring", delay: 0.2 } },
+  exit: { opacity: 0, x: -100 },
+};
+
+
 
 const GameScreen = ({ changeTheme }) => {
   const [openI, setopenI] = useState(true);
@@ -68,6 +78,12 @@ const GameScreen = ({ changeTheme }) => {
   return (
     <Container
       maxWidth="sm"
+      component={motion.div}
+      variants={animations}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: .5 }}
       sx={{
         minHeight: "100vh",
         display: "flex",
