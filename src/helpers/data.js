@@ -19,6 +19,8 @@ import eCommerce from "../assets/projects/E-commerce-back.PNG";
 import chatApp from "../assets/projects/Chat-app.PNG";
 //------------------------------------------------------------------------
 import todoApp from "../assets/projects/todo-app.PNG";
+//------------------------------------------------------------------------
+import ticketApp from "../assets/projects/socket-ticket-ingresar.PNG";
 
 export const data = [
   {
@@ -29,6 +31,15 @@ export const data = [
     repo: "https://github.com/DiegoRodriguez-sc/todo_app-frontend",
     small:"React.js, Tailwindcss, Redux, Node.js, Express, MongoDB.",
     p:"App para crear, organizar, completar tareas e ideas, con registro y logeo de usuarios ."
+  },
+  {
+    title: "Ticket App.",
+    img: ticketApp,
+    tech: "React Node Ant Design Socket.io Express",
+    link: "https://ticket-app-mauve.vercel.app/",
+    repo: "https://github.com/DiegoRodriguez-sc/ticket-app-front",
+    small:"React.js, Ant Design, Node.js, Express, Socket.io.",
+    p:"Aplicación de tickets utilizando socket.io"
   },
   {
     title: "Super App.",
