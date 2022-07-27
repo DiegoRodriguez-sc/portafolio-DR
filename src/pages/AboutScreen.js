@@ -53,13 +53,13 @@ const AboutScreen = ({ changeTheme }) => {
           Quien Soy?
         </Typography>
         <Box mb={2} />
-        <Box
+        {/* <Box
           component="img"
           loading="lazy"
           sx={{ width: "100%" }}
           alt={"foto de perfil"}
           src={photo}
-        />
+        /> */}
         <Box mb={2} />
         <Typography paragraph={true} variant="h4">
           Mi nombre es Diego Rodriguez, soy desarrollador web y estudiante de
